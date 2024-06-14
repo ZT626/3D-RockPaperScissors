@@ -1,2 +1,2 @@
 # 3D-RockPaperScissors
-A 3d version of the classic game rock, paper and scissors!
+![3D RockPaperScissors](https://github.com/ZT626/3D-RockPaperScissors/assets/171147569/2b7a1c35-be1f-465c-9931-77ef6269237d)
