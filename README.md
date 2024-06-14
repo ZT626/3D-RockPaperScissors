@@ -26,4 +26,4 @@ Simply run ``npm run dev`` and a web page should start up with vite!
 
 - [ ] Add animations when the button is pressed using GSAP
 - [x] Errors and bugs should be fixed 
-- [x] Make the 3d objects more responsive aswell as the UI
+- [ ] Make the 3d objects more responsive aswell as the UI
