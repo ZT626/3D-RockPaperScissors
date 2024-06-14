@@ -10,6 +10,6 @@
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=css" height="40" alt="css3 logo"  />
 </div>
-###
+
 ## Use
 Simply run ``npm run dev`` and a web page should start up with vite!
