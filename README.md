@@ -21,3 +21,9 @@ Hey there, a quick little project to get the ball rolling, more projects to come
 
 ## Use
 Simply run ``npm run dev`` and a web page should start up with vite!
+
+### Todolist (when i come back to this)
+
+- [ ] Add animations when the button is pressed using GSAP
+- [x] Errors and bugs should be fixed 
+- [x] Make the 3d objects more responsive aswell as the UI
