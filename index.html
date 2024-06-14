@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>3D RockPaperScissors</title>
+  </head>
+  <body>
+    <canvas class="webgl"></canvas>
+
+    <div id="toggle">
+      <input type="checkbox" id="cb1" /><label for="cb1">Toggle to adjust canvas</label>
+    </div>
+
+    <div class="end-top">
+      <div class="score">
+        <span id="wins">00</span>: <span id="draws">00</span>:
+        <span id="losses">00</span>
+      </div>
+
+      <div class="hoverOnScore">
+        <div class="hoverWin">
+          <img src="/arrow.svg" alt="" />
+          <div>Wins</div>
+        </div>
+        <div class="hoverDraw">
+          <img src="/arrow.svg" alt="" />
+          <div>Draws</div>
+        </div>
+        <div class="hoverLoss">
+          <img src="/arrow.svg" alt="" />
+          <div>Losses</div>
+        </div>
+      </div>
+
+      <div class="end">
+        <div class="buttons">
+          <button id="rock" class="btnInd">
+            <img src="/hand-fiist.svg" alt="" />
+          </button>
+          <button id="paper" class="btnInd">
+            <img src="/hand-four.svg" alt="" />
+          </button>
+          <button id="scissor" class="btnInd">
+            <img src="/hand-fight-2-finger.svg" alt="" />
+          </button>
+        </div>
+
+        <footer>
+          <div id="container">
+            <div id="made">
+              MADE BY <a href="https://github.com/ZT626">ZT626</a>
+            </div>
+            <div id="inspired">
+              INPIRED BY
+              <a href="https://github.com/Kirilbt/hand-armature/tree/main"
+                >KIRIL</a
+              >
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
