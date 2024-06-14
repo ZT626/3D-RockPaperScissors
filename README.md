@@ -1,6 +1,7 @@
 # 3D-RockPaperScissors
 ![3D RockPaperScissors](https://github.com/ZT626/3D-RockPaperScissors/assets/171147569/2b7a1c35-be1f-465c-9931-77ef6269237d)
-Hey there a quick little project to get the ball rolling, more projects to come! you are free to use the code however you see fit and maybe even modify it for your needs. This project was inspired by kiril, with his hand pose simulator.
+
+Hey there, a quick little project to get the ball rolling, more projects to come! you are free to use the code however you see fit and maybe even modify it for your needs. This project was inspired by kiril, with his hand pose simulator.
 ## Technologies used
 <div align="left">
   <img src="https://skillicons.dev/icons?i=threejs" height="40" alt="threejs logo"  />
