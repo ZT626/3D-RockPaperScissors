@@ -20,64 +20,64 @@ let fingerBonesTwo = [];
 let handMeshesTwo = [];
 
 const bonesOne = {
-    wrist: null,
-    wrist1: null,
-    wrist2: null,
-    wrist3: null,
-    wrist4: null,
-    wrist5: null,
-    wrist6: null,
+  wrist: null,
+  wrist1: null,
+  wrist2: null,
+  wrist3: null,
+  wrist4: null,
+  wrist5: null,
+  wrist6: null,
 
-    thumb1: null,
-    thumb2: null,
-    thumb3: null,
+  thumb1: null,
+  thumb2: null,
+  thumb3: null,
 
-    index1: null,
-    index2: null,
-    index3: null,
+  index1: null,
+  index2: null,
+  index3: null,
 
-    middle1: null,
-    middle2: null,
-    middle3: null,
+  middle1: null,
+  middle2: null,
+  middle3: null,
 
-    ring1: null,
-    ring2: null,
-    ring3: null,
+  ring1: null,
+  ring2: null,
+  ring3: null,
 
-    pinky1: null,
-    pinky2: null,
-    pinky3: null,
-}
+  pinky1: null,
+  pinky2: null,
+  pinky3: null,
+};
 
 const bonesTwo = {
-    wrist: null,
-    wrist1: null,
-    wrist2: null,
-    wrist3: null,
-    wrist4: null,
-    wrist5: null,
-    wrist6: null,
+  wrist: null,
+  wrist1: null,
+  wrist2: null,
+  wrist3: null,
+  wrist4: null,
+  wrist5: null,
+  wrist6: null,
 
-    thumb1: null,
-    thumb2: null,
-    thumb3: null,
+  thumb1: null,
+  thumb2: null,
+  thumb3: null,
 
-    index1: null,
-    index2: null,
-    index3: null,
+  index1: null,
+  index2: null,
+  index3: null,
 
-    middle1: null,
-    middle2: null,
-    middle3: null,
+  middle1: null,
+  middle2: null,
+  middle3: null,
 
-    ring1: null,
-    ring2: null,
-    ring3: null,
+  ring1: null,
+  ring2: null,
+  ring3: null,
 
-    pinky1: null,
-    pinky2: null,
-    pinky3: null, 
-}
+  pinky1: null,
+  pinky2: null,
+  pinky3: null,
+};
 
 const PARAMETERS = {
   bg: 0xffffff,
@@ -86,31 +86,31 @@ const PARAMETERS = {
   coat: [0x0000ff, 0xff0000],
   // values of the following things have been copied! change for later use!
   paramBonesOne: {
-    wrist: 0.00,
+    wrist: 0.0,
     thumb: 0.9,
-    index: 1.10,
+    index: 1.1,
     middle: 1.25,
     ring: 1.25,
     pinky: 1.15,
-    thumbz: -0.10,
+    thumbz: -0.1,
     indexz: -0.08,
     middlez: 0.02,
     ringz: 0.09,
     pinkyz: 0.2,
   },
   paramBonesTwo: {
-    wrist: 0.00,
+    wrist: 0.0,
     thumb: 0.9,
-    index: 1.10,
+    index: 1.1,
     middle: 1.25,
     ring: 1.25,
     pinky: 1.15,
-    thumbz: -0.10,
+    thumbz: -0.1,
     indexz: -0.08,
     middlez: 0.02,
     ringz: 0.09,
     pinkyz: 0.2,
-  }, 
+  },
 };
 
 // setting up the basic scene
@@ -154,7 +154,7 @@ loader.load(
     // assigns objects depending on properties
     assignObjects(handOne.scene, "one");
     materialAssignment(handOne.scene, "one");
-    settingBones(handOne.scene, "one")
+    settingBones(handOne.scene, "one");
   },
   undefined,
   (error) => {
@@ -169,14 +169,14 @@ loader.load(
     scene.add(handTwo.scene);
 
     handTwo.scene.rotation.z = Math.PI / 2;
-    handTwo.scene.rotation.x = 3.2
+    handTwo.scene.rotation.x = 3.2;
     handTwo.scene.scale.set(0.3, 0.3, 0.3);
     handTwo.scene.position.set(1, 1, 0);
 
     // assigns objects depending on properties
     assignObjects(handTwo.scene, "two");
     materialAssignment(handTwo.scene, "two");
-    settingBones(handTwo.scene, "two")
+    settingBones(handTwo.scene, "two");
   },
   undefined,
   (error) => {
@@ -273,140 +273,139 @@ const assignObjects = (model, whatModel) => {
 // setting bones
 
 const settingBones = (model, whatModel) => {
-    switch (whatModel) {
-        case "one":
-            bonesOne.wrist = model.getObjectByName('Hand').skeleton.bones[0]
-            bonesOne.wrist1 = model.getObjectByName('Hand').skeleton.bones[1]
-            bonesOne.wrist2 = model.getObjectByName('Hand').skeleton.bones[2]
-            bonesOne.wrist3 = model.getObjectByName('Hand').skeleton.bones[6]
-            bonesOne.wrist4 = model.getObjectByName('Hand').skeleton.bones[10]
-            bonesOne.wrist5 = model.getObjectByName('Hand').skeleton.bones[14]
-            bonesOne.wrist6 = model.getObjectByName('Hand').skeleton.bones[18]
-            bonesOne.wrist1.rotation.x = PARAMETERS.paramBonesOne.wrist
-            bonesOne.wrist2.rotation.x = PARAMETERS.paramBonesOne.wrist
-            bonesOne.wrist3.rotation.x = PARAMETERS.paramBonesOne.wrist
-            bonesOne.wrist4.rotation.x = PARAMETERS.paramBonesOne.wrist
-            bonesOne.wrist5.rotation.x = PARAMETERS.paramBonesOne.wrist
-            bonesOne.wrist6.rotation.x = PARAMETERS.paramBonesOne.wrist
+  switch (whatModel) {
+    case "one":
+      bonesOne.wrist = model.getObjectByName("Hand").skeleton.bones[0];
+      bonesOne.wrist1 = model.getObjectByName("Hand").skeleton.bones[1];
+      bonesOne.wrist2 = model.getObjectByName("Hand").skeleton.bones[2];
+      bonesOne.wrist3 = model.getObjectByName("Hand").skeleton.bones[6];
+      bonesOne.wrist4 = model.getObjectByName("Hand").skeleton.bones[10];
+      bonesOne.wrist5 = model.getObjectByName("Hand").skeleton.bones[14];
+      bonesOne.wrist6 = model.getObjectByName("Hand").skeleton.bones[18];
+      bonesOne.wrist1.rotation.x = PARAMETERS.paramBonesOne.wrist;
+      bonesOne.wrist2.rotation.x = PARAMETERS.paramBonesOne.wrist;
+      bonesOne.wrist3.rotation.x = PARAMETERS.paramBonesOne.wrist;
+      bonesOne.wrist4.rotation.x = PARAMETERS.paramBonesOne.wrist;
+      bonesOne.wrist5.rotation.x = PARAMETERS.paramBonesOne.wrist;
+      bonesOne.wrist6.rotation.x = PARAMETERS.paramBonesOne.wrist;
 
-            bonesOne.thumb1 = model.getObjectByName('Hand').skeleton.bones[3]
-            bonesOne.thumb2 = model.getObjectByName('Hand').skeleton.bones[4]
-            bonesOne.thumb3 = model.getObjectByName('Hand').skeleton.bones[5]
-            bonesOne.thumb1.rotation.x = PARAMETERS.paramBonesOne.thumb
-            bonesOne.thumb2.rotation.x = PARAMETERS.paramBonesOne.thumb
-            bonesOne.thumb3.rotation.x = PARAMETERS.paramBonesOne.thumb
-            bonesOne.thumb1.rotation.z = PARAMETERS.paramBonesOne.thumbz
-            bonesOne.thumb2.rotation.z = PARAMETERS.paramBonesOne.thumbz
-            bonesOne.thumb3.rotation.z = PARAMETERS.paramBonesOne.thumbz
+      bonesOne.thumb1 = model.getObjectByName("Hand").skeleton.bones[3];
+      bonesOne.thumb2 = model.getObjectByName("Hand").skeleton.bones[4];
+      bonesOne.thumb3 = model.getObjectByName("Hand").skeleton.bones[5];
+      bonesOne.thumb1.rotation.x = PARAMETERS.paramBonesOne.thumb;
+      bonesOne.thumb2.rotation.x = PARAMETERS.paramBonesOne.thumb;
+      bonesOne.thumb3.rotation.x = PARAMETERS.paramBonesOne.thumb;
+      bonesOne.thumb1.rotation.z = PARAMETERS.paramBonesOne.thumbz;
+      bonesOne.thumb2.rotation.z = PARAMETERS.paramBonesOne.thumbz;
+      bonesOne.thumb3.rotation.z = PARAMETERS.paramBonesOne.thumbz;
 
-            bonesOne.index1 = model.getObjectByName('Hand').skeleton.bones[7]
-            bonesOne.index2 = model.getObjectByName('Hand').skeleton.bones[8]
-            bonesOne.index3 = model.getObjectByName('Hand').skeleton.bones[9]
-            bonesOne.index1.rotation.x = PARAMETERS.paramBonesOne.index
-            bonesOne.index2.rotation.x = PARAMETERS.paramBonesOne.index
-            bonesOne.index3.rotation.x = PARAMETERS.paramBonesOne.index
-            bonesOne.index1.rotation.z = PARAMETERS.paramBonesOne.indexz
-            bonesOne.index2.rotation.z = PARAMETERS.paramBonesOne.indexz
-            bonesOne.index3.rotation.z = PARAMETERS.paramBonesOne.indexz
+      bonesOne.index1 = model.getObjectByName("Hand").skeleton.bones[7];
+      bonesOne.index2 = model.getObjectByName("Hand").skeleton.bones[8];
+      bonesOne.index3 = model.getObjectByName("Hand").skeleton.bones[9];
+      bonesOne.index1.rotation.x = PARAMETERS.paramBonesOne.index;
+      bonesOne.index2.rotation.x = PARAMETERS.paramBonesOne.index;
+      bonesOne.index3.rotation.x = PARAMETERS.paramBonesOne.index;
+      bonesOne.index1.rotation.z = PARAMETERS.paramBonesOne.indexz;
+      bonesOne.index2.rotation.z = PARAMETERS.paramBonesOne.indexz;
+      bonesOne.index3.rotation.z = PARAMETERS.paramBonesOne.indexz;
 
+      bonesOne.middle1 = model.getObjectByName("Hand").skeleton.bones[11];
+      bonesOne.middle2 = model.getObjectByName("Hand").skeleton.bones[12];
+      bonesOne.middle3 = model.getObjectByName("Hand").skeleton.bones[13];
+      bonesOne.middle1.rotation.x = PARAMETERS.paramBonesOne.middle;
+      bonesOne.middle2.rotation.x = PARAMETERS.paramBonesOne.middle;
+      bonesOne.middle3.rotation.x = PARAMETERS.paramBonesOne.middle;
+      bonesOne.middle1.rotation.z = PARAMETERS.paramBonesOne.middlez;
+      bonesOne.middle2.rotation.z = PARAMETERS.paramBonesOne.middlez;
+      bonesOne.middle3.rotation.z = PARAMETERS.paramBonesOne.middlez;
 
-            bonesOne.middle1 = model.getObjectByName('Hand').skeleton.bones[11]
-            bonesOne.middle2 = model.getObjectByName('Hand').skeleton.bones[12]
-            bonesOne.middle3 = model.getObjectByName('Hand').skeleton.bones[13]
-            bonesOne.middle1.rotation.x = PARAMETERS.paramBonesOne.middle
-            bonesOne.middle2.rotation.x = PARAMETERS.paramBonesOne.middle
-            bonesOne.middle3.rotation.x = PARAMETERS.paramBonesOne.middle
-            bonesOne.middle1.rotation.z = PARAMETERS.paramBonesOne.middlez
-            bonesOne.middle2.rotation.z = PARAMETERS.paramBonesOne.middlez
-            bonesOne.middle3.rotation.z = PARAMETERS.paramBonesOne.middlez
+      bonesOne.ring1 = model.getObjectByName("Hand").skeleton.bones[15];
+      bonesOne.ring2 = model.getObjectByName("Hand").skeleton.bones[16];
+      bonesOne.ring3 = model.getObjectByName("Hand").skeleton.bones[17];
+      bonesOne.ring1.rotation.x = PARAMETERS.paramBonesOne.ring;
+      bonesOne.ring2.rotation.x = PARAMETERS.paramBonesOne.ring;
+      bonesOne.ring3.rotation.x = PARAMETERS.paramBonesOne.ring;
+      bonesOne.ring1.rotation.z = PARAMETERS.paramBonesOne.ringz;
+      bonesOne.ring2.rotation.z = PARAMETERS.paramBonesOne.ringz;
+      bonesOne.ring3.rotation.z = PARAMETERS.paramBonesOne.ringz;
 
-            bonesOne.ring1 = model.getObjectByName('Hand').skeleton.bones[15]
-            bonesOne.ring2 = model.getObjectByName('Hand').skeleton.bones[16]
-            bonesOne.ring3 = model.getObjectByName('Hand').skeleton.bones[17]
-            bonesOne.ring1.rotation.x = PARAMETERS.paramBonesOne.ring
-            bonesOne.ring2.rotation.x = PARAMETERS.paramBonesOne.ring
-            bonesOne.ring3.rotation.x = PARAMETERS.paramBonesOne.ring
-            bonesOne.ring1.rotation.z = PARAMETERS.paramBonesOne.ringz
-            bonesOne.ring2.rotation.z = PARAMETERS.paramBonesOne.ringz
-            bonesOne.ring3.rotation.z = PARAMETERS.paramBonesOne.ringz
+      bonesOne.pinky1 = model.getObjectByName("Hand").skeleton.bones[19];
+      bonesOne.pinky2 = model.getObjectByName("Hand").skeleton.bones[20];
+      bonesOne.pinky3 = model.getObjectByName("Hand").skeleton.bones[21];
+      bonesOne.pinky1.rotation.x = PARAMETERS.paramBonesOne.pinky;
+      bonesOne.pinky2.rotation.x = PARAMETERS.paramBonesOne.pinky;
+      bonesOne.pinky3.rotation.x = PARAMETERS.paramBonesOne.pinky;
+      bonesOne.pinky1.rotation.z = PARAMETERS.paramBonesOne.pinkyz;
+      bonesOne.pinky2.rotation.z = PARAMETERS.paramBonesOne.pinkyz;
+      bonesOne.pinky3.rotation.z = PARAMETERS.paramBonesOne.pinkyz;
+      break;
+    case "two":
+      bonesTwo.wrist = model.getObjectByName("Hand").skeleton.bones[0];
+      bonesTwo.wrist1 = model.getObjectByName("Hand").skeleton.bones[1];
+      bonesTwo.wrist2 = model.getObjectByName("Hand").skeleton.bones[2];
+      bonesTwo.wrist3 = model.getObjectByName("Hand").skeleton.bones[6];
+      bonesTwo.wrist4 = model.getObjectByName("Hand").skeleton.bones[10];
+      bonesTwo.wrist5 = model.getObjectByName("Hand").skeleton.bones[14];
+      bonesTwo.wrist6 = model.getObjectByName("Hand").skeleton.bones[18];
+      bonesTwo.wrist1.rotation.x = PARAMETERS.paramBonesTwo.wrist;
+      bonesTwo.wrist2.rotation.x = PARAMETERS.paramBonesTwo.wrist;
+      bonesTwo.wrist3.rotation.x = PARAMETERS.paramBonesTwo.wrist;
+      bonesTwo.wrist4.rotation.x = PARAMETERS.paramBonesTwo.wrist;
+      bonesTwo.wrist5.rotation.x = PARAMETERS.paramBonesTwo.wrist;
+      bonesTwo.wrist6.rotation.x = PARAMETERS.paramBonesTwo.wrist;
 
-            bonesOne.pinky1 = model.getObjectByName('Hand').skeleton.bones[19]
-            bonesOne.pinky2 = model.getObjectByName('Hand').skeleton.bones[20]
-            bonesOne.pinky3 = model.getObjectByName('Hand').skeleton.bones[21]
-            bonesOne.pinky1.rotation.x = PARAMETERS.paramBonesOne.pinky
-            bonesOne.pinky2.rotation.x = PARAMETERS.paramBonesOne.pinky
-            bonesOne.pinky3.rotation.x = PARAMETERS.paramBonesOne.pinky
-            bonesOne.pinky1.rotation.z = PARAMETERS.paramBonesOne.pinkyz
-            bonesOne.pinky2.rotation.z = PARAMETERS.paramBonesOne.pinkyz
-            bonesOne.pinky3.rotation.z = PARAMETERS.paramBonesOne.pinkyz
-          break;
-        case "two":
-            bonesTwo.wrist = model.getObjectByName('Hand').skeleton.bones[0]
-            bonesTwo.wrist1 = model.getObjectByName('Hand').skeleton.bones[1]
-            bonesTwo.wrist2 = model.getObjectByName('Hand').skeleton.bones[2]
-            bonesTwo.wrist3 = model.getObjectByName('Hand').skeleton.bones[6]
-            bonesTwo.wrist4 = model.getObjectByName('Hand').skeleton.bones[10]
-            bonesTwo.wrist5 = model.getObjectByName('Hand').skeleton.bones[14]
-            bonesTwo.wrist6 = model.getObjectByName('Hand').skeleton.bones[18]
-            bonesTwo.wrist1.rotation.x = PARAMETERS.paramBonesTwo.wrist
-            bonesTwo.wrist2.rotation.x = PARAMETERS.paramBonesTwo.wrist
-            bonesTwo.wrist3.rotation.x = PARAMETERS.paramBonesTwo.wrist
-            bonesTwo.wrist4.rotation.x = PARAMETERS.paramBonesTwo.wrist
-            bonesTwo.wrist5.rotation.x = PARAMETERS.paramBonesTwo.wrist
-            bonesTwo.wrist6.rotation.x = PARAMETERS.paramBonesTwo.wrist
+      bonesTwo.thumb1 = model.getObjectByName("Hand").skeleton.bones[3];
+      bonesTwo.thumb2 = model.getObjectByName("Hand").skeleton.bones[4];
+      bonesTwo.thumb3 = model.getObjectByName("Hand").skeleton.bones[5];
+      bonesTwo.thumb1.rotation.x = PARAMETERS.paramBonesTwo.thumb;
+      bonesTwo.thumb2.rotation.x = PARAMETERS.paramBonesTwo.thumb;
+      bonesTwo.thumb3.rotation.x = PARAMETERS.paramBonesTwo.thumb;
+      bonesTwo.thumb1.rotation.z = PARAMETERS.paramBonesTwo.thumbz;
+      bonesTwo.thumb2.rotation.z = PARAMETERS.paramBonesTwo.thumbz;
+      bonesTwo.thumb3.rotation.z = PARAMETERS.paramBonesTwo.thumbz;
 
-            bonesTwo.thumb1 = model.getObjectByName('Hand').skeleton.bones[3]
-            bonesTwo.thumb2 = model.getObjectByName('Hand').skeleton.bones[4]
-            bonesTwo.thumb3 = model.getObjectByName('Hand').skeleton.bones[5]
-            bonesTwo.thumb1.rotation.x = PARAMETERS.paramBonesTwo.thumb
-            bonesTwo.thumb2.rotation.x = PARAMETERS.paramBonesTwo.thumb
-            bonesTwo.thumb3.rotation.x = PARAMETERS.paramBonesTwo.thumb
-            bonesTwo.thumb1.rotation.z = PARAMETERS.paramBonesTwo.thumbz
-            bonesTwo.thumb2.rotation.z = PARAMETERS.paramBonesTwo.thumbz
-            bonesTwo.thumb3.rotation.z = PARAMETERS.paramBonesTwo.thumbz
+      bonesTwo.index1 = model.getObjectByName("Hand").skeleton.bones[7];
+      bonesTwo.index2 = model.getObjectByName("Hand").skeleton.bones[8];
+      bonesTwo.index3 = model.getObjectByName("Hand").skeleton.bones[9];
+      bonesTwo.index1.rotation.x = PARAMETERS.paramBonesTwo.index;
+      bonesTwo.index2.rotation.x = PARAMETERS.paramBonesTwo.index;
+      bonesTwo.index3.rotation.x = PARAMETERS.paramBonesTwo.index;
+      bonesTwo.index1.rotation.z = PARAMETERS.paramBonesTwo.indexz;
+      bonesTwo.index2.rotation.z = PARAMETERS.paramBonesTwo.indexz;
+      bonesTwo.index3.rotation.z = PARAMETERS.paramBonesTwo.indexz;
 
-            bonesTwo.index1 = model.getObjectByName('Hand').skeleton.bones[7]
-            bonesTwo.index2 = model.getObjectByName('Hand').skeleton.bones[8]
-            bonesTwo.index3 = model.getObjectByName('Hand').skeleton.bones[9]
-            bonesTwo.index1.rotation.x = PARAMETERS.paramBonesTwo.index
-            bonesTwo.index2.rotation.x = PARAMETERS.paramBonesTwo.index
-            bonesTwo.index3.rotation.x = PARAMETERS.paramBonesTwo.index
-            bonesTwo.index1.rotation.z = PARAMETERS.paramBonesTwo.indexz
-            bonesTwo.index2.rotation.z = PARAMETERS.paramBonesTwo.indexz
-            bonesTwo.index3.rotation.z = PARAMETERS.paramBonesTwo.indexz
+      bonesTwo.middle1 = model.getObjectByName("Hand").skeleton.bones[11];
+      bonesTwo.middle2 = model.getObjectByName("Hand").skeleton.bones[12];
+      bonesTwo.middle3 = model.getObjectByName("Hand").skeleton.bones[13];
+      bonesTwo.middle1.rotation.x = PARAMETERS.paramBonesTwo.middle;
+      bonesTwo.middle2.rotation.x = PARAMETERS.paramBonesTwo.middle;
+      bonesTwo.middle3.rotation.x = PARAMETERS.paramBonesTwo.middle;
+      bonesTwo.middle1.rotation.z = PARAMETERS.paramBonesTwo.middlez;
+      bonesTwo.middle2.rotation.z = PARAMETERS.paramBonesTwo.middlez;
+      bonesTwo.middle3.rotation.z = PARAMETERS.paramBonesTwo.middlez;
 
-            bonesTwo.middle1 = model.getObjectByName('Hand').skeleton.bones[11]
-            bonesTwo.middle2 = model.getObjectByName('Hand').skeleton.bones[12]
-            bonesTwo.middle3 = model.getObjectByName('Hand').skeleton.bones[13]
-            bonesTwo.middle1.rotation.x = PARAMETERS.paramBonesTwo.middle
-            bonesTwo.middle2.rotation.x = PARAMETERS.paramBonesTwo.middle
-            bonesTwo.middle3.rotation.x = PARAMETERS.paramBonesTwo.middle
-            bonesTwo.middle1.rotation.z = PARAMETERS.paramBonesTwo.middlez
-            bonesTwo.middle2.rotation.z = PARAMETERS.paramBonesTwo.middlez
-            bonesTwo.middle3.rotation.z = PARAMETERS.paramBonesTwo.middlez
+      bonesTwo.ring1 = model.getObjectByName("Hand").skeleton.bones[15];
+      bonesTwo.ring2 = model.getObjectByName("Hand").skeleton.bones[16];
+      bonesTwo.ring3 = model.getObjectByName("Hand").skeleton.bones[17];
+      bonesTwo.ring1.rotation.x = PARAMETERS.paramBonesTwo.ring;
+      bonesTwo.ring2.rotation.x = PARAMETERS.paramBonesTwo.ring;
+      bonesTwo.ring3.rotation.x = PARAMETERS.paramBonesTwo.ring;
+      bonesTwo.ring1.rotation.z = PARAMETERS.paramBonesTwo.ringz;
+      bonesTwo.ring2.rotation.z = PARAMETERS.paramBonesTwo.ringz;
+      bonesTwo.ring3.rotation.z = PARAMETERS.paramBonesTwo.ringz;
 
-            bonesTwo.ring1 = model.getObjectByName('Hand').skeleton.bones[15]
-            bonesTwo.ring2 = model.getObjectByName('Hand').skeleton.bones[16]
-            bonesTwo.ring3 = model.getObjectByName('Hand').skeleton.bones[17]
-            bonesTwo.ring1.rotation.x = PARAMETERS.paramBonesTwo.ring
-            bonesTwo.ring2.rotation.x = PARAMETERS.paramBonesTwo.ring
-            bonesTwo.ring3.rotation.x = PARAMETERS.paramBonesTwo.ring
-            bonesTwo.ring1.rotation.z = PARAMETERS.paramBonesTwo.ringz
-            bonesTwo.ring2.rotation.z = PARAMETERS.paramBonesTwo.ringz
-            bonesTwo.ring3.rotation.z = PARAMETERS.paramBonesTwo.ringz
-
-            bonesTwo.pinky1 = model.getObjectByName('Hand').skeleton.bones[19]
-            bonesTwo.pinky2 = model.getObjectByName('Hand').skeleton.bones[20]
-            bonesTwo.pinky3 = model.getObjectByName('Hand').skeleton.bones[21]
-            bonesTwo.pinky1.rotation.x = PARAMETERS.paramBonesTwo.pinky
-            bonesTwo.pinky2.rotation.x = PARAMETERS.paramBonesTwo.pinky
-            bonesTwo.pinky3.rotation.x = PARAMETERS.paramBonesTwo.pinky
-            bonesTwo.pinky1.rotation.z = PARAMETERS.paramBonesTwo.pinkyz
-            bonesTwo.pinky2.rotation.z = PARAMETERS.paramBonesTwo.pinkyz
-            bonesTwo.pinky3.rotation.z = PARAMETERS.paramBonesTwo.pinkyz
-            break;
-    }
-}
+      bonesTwo.pinky1 = model.getObjectByName("Hand").skeleton.bones[19];
+      bonesTwo.pinky2 = model.getObjectByName("Hand").skeleton.bones[20];
+      bonesTwo.pinky3 = model.getObjectByName("Hand").skeleton.bones[21];
+      bonesTwo.pinky1.rotation.x = PARAMETERS.paramBonesTwo.pinky;
+      bonesTwo.pinky2.rotation.x = PARAMETERS.paramBonesTwo.pinky;
+      bonesTwo.pinky3.rotation.x = PARAMETERS.paramBonesTwo.pinky;
+      bonesTwo.pinky1.rotation.z = PARAMETERS.paramBonesTwo.pinkyz;
+      bonesTwo.pinky2.rotation.z = PARAMETERS.paramBonesTwo.pinkyz;
+      bonesTwo.pinky3.rotation.z = PARAMETERS.paramBonesTwo.pinkyz;
+      break;
+  }
+};
 
 // Gets window sizes and updates for responsiveness
 
@@ -528,10 +527,31 @@ buttonPaper.addEventListener("click", () => {
 buttonScissor.addEventListener("click", () => {
   playerPick.unshift(possibleAnswers[2]);
   computerPicker();
+  
+  const duration = 0.8; // Duration of the animation in seconds
+
+  GSAP.to(bonesOne.index1.rotation, {
+    x: 0.1,
+    duration: duration,
+    ease: "power1.inOut"
+  });
+
+  GSAP.to(bonesOne.index2.rotation, {
+    x: 0.1,
+    duration: duration,
+    ease: "power1.inOut"
+  });
+
+  GSAP.to(bonesOne.index3.rotation, {
+    x: 0.1,
+    duration: duration,
+    ease: "power1.inOut"
+  });
 });
 
 const computerPicker = () => {
-  let computerAns = possibleAnswers[Math.floor(Math.random() * possibleAnswers.length)];
+  let computerAns =
+    possibleAnswers[Math.floor(Math.random() * possibleAnswers.length)];
   console.log("computer answer", computerAns);
   computerPick.unshift(computerAns);
   console.log(playerPick, "and", computerPick);
@@ -595,3 +615,18 @@ toggle.addEventListener("change", () => {
     canvas.style.zIndex = 10;
   }
 });
+
+console.log(bonesOne)
+console.log(bonesTwo)
+
+function handAnimator(playerPick, ComputerPick) {}
+
+function rock() {}
+
+function scissors() {}
+
+function paper() {}
+
+function upNDownHand() {}
+
+function returnNomral() {}
