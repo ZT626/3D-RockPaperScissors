@@ -522,30 +522,107 @@ buttonRock.addEventListener("click", () => {
 buttonPaper.addEventListener("click", () => {
   playerPick.unshift(possibleAnswers[1]);
   computerPicker();
-});
 
-buttonScissor.addEventListener("click", () => {
-  playerPick.unshift(possibleAnswers[2]);
-  computerPicker();
-  
-  const duration = 0.8; // Duration of the animation in seconds
+  const duration = 0.8;
 
   GSAP.to(bonesOne.index1.rotation, {
     x: 0.1,
     duration: duration,
-    ease: "power1.inOut"
+    ease: "power1.inOut",
   });
 
   GSAP.to(bonesOne.index2.rotation, {
     x: 0.1,
     duration: duration,
-    ease: "power1.inOut"
+    ease: "power1.inOut",
   });
 
   GSAP.to(bonesOne.index3.rotation, {
     x: 0.1,
     duration: duration,
-    ease: "power1.inOut"
+    ease: "power1.inOut",
+  });
+
+  GSAP.to(bonesOne.middle1.rotation, {
+    x: 0.1,
+    duration: duration,
+    ease: "power1.inOut",
+  });
+
+  GSAP.to(bonesOne.middle2.rotation, {
+    x: 0.1,
+    duration: duration,
+    ease: "power1.inOut",
+  });
+
+  GSAP.to(bonesOne.middle3.rotation, {
+    x: 0.1,
+    duration: duration,
+    ease: "power1.inOut",
+  });
+
+  GSAP.to(bonesOne.pinky1.rotation, {
+    x: 0.1,
+    duration: duration,
+    ease: "power1.inOut",
+  });
+
+  GSAP.to(bonesOne.pinky2.rotation, {
+    x: 0.1,
+    duration: duration,
+    ease: "power1.inOut",
+  });
+
+  GSAP.to(bonesOne.pinky3.rotation, {
+    x: 0.1,
+    duration: duration,
+    ease: "power1.inOut",
+  });
+});
+
+buttonScissor.addEventListener("click", () => {
+  playerPick.unshift(possibleAnswers[2]);
+  computerPicker();
+
+  const duration = 0.8; // Duration of the animation in seconds
+
+  GSAP.to(bonesOne.index1.rotation, {
+    x: 0.1,
+    duration: duration,
+    ease: "power1.inOut",
+  });
+
+  GSAP.to(bonesOne.index2.rotation, {
+    x: 0.1,
+    duration: duration,
+    ease: "power1.inOut",
+  });
+
+  GSAP.to(bonesOne.index3.rotation, {
+    x: 0.1,
+    duration: duration,
+    ease: "power1.inOut",
+  });
+
+  GSAP.to(bonesOne.middle1.rotation, {
+    x: 0.1,
+    z: -0.1,
+    duration: duration,
+    ease: "power1.inOut",
+  });
+
+  GSAP.to(bonesOne.middle2.rotation, {
+    x: 0.1,
+    z: -0.1,
+    duration: duration,
+    ease: "power1.inOut",
+  });
+
+  GSAP.to(bonesOne.middle3.rotation, {
+    x: 0.1,
+    z: -0.1,
+    duration: duration,
+    ease: "power1.inOut",
   });
 });
 
@@ -616,8 +693,8 @@ toggle.addEventListener("change", () => {
   }
 });
 
-console.log(bonesOne)
-console.log(bonesTwo)
+console.log(bonesOne);
+console.log(bonesTwo);
 
 function handAnimator(playerPick, ComputerPick) {}
 
